@@ -1,0 +1,17 @@
+Problema 4: Selección de Características por Importancia Acumulada
+El Problema: Al entrenar un modelo de árbol (como Random Forest), obtenemos la importancia de cada variable. A menudo queremos quedarnos solo con las variables más importantes que juntas sumen, por ejemplo, el 95% de la importancia total para simplificar el modelo sin perder mucha información.
+Tu Misión: Entrena un modelo rápido, suma las importancias de mayor a menor y corta cuando alcances el porcentaje deseado.
+
+Nombre de la función: seleccionar_features_por_peso
+
+Argumentos:
+
+X (pd.DataFrame): Matriz de características.
+
+y (pd.Series/np.array): Variable objetivo.
+
+porcentaje_acumulado (float): Valor entre 0 y 1 (ej. 0.90).
+
+Tipo de objeto a devolver: np.ndarray (Un array con los nombres de las columnas seleccionadas).
+
+Requerimientos: Utiliza sklearn.ensemble.RandomForestClassifier para extraer feature_importances_. Debes ordenar las importancias de forma descendente y usar numpy.cumsum() para encontrar el punto de corte.

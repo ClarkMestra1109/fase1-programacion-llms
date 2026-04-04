@@ -1,0 +1,15 @@
+Problema 3: Detección de Multicolinealidad (VIF)
+El Problema: En modelos lineales, si dos o más variables están muy correlacionadas entre sí (multicolinealidad), el modelo se vuelve inestable. Una forma de medir esto es el Factor de Inflación de la Varianza (VIF). Un VIF mayor a 5 o 10 suele indicar que la variable es redundante.
+Tu Misión: Escribe una función que calcule el VIF para cada columna numérica y devuelva aquellas que superan un umbral.
+
+Nombre de la función: identificar_variables_redundantes
+
+Argumentos:
+
+df (pd.DataFrame): El conjunto de datos con variables numéricas.
+
+umbral (float): El valor límite de VIF (por defecto 5.0).
+
+Tipo de objeto a devolver: list (Una lista de strings con los nombres de las columnas que superan el umbral).
+
+Requerimientos: Utiliza statsmodels.stats.outliers_influence.variance_inflation_factor (o calcúlalo manualmente usando una regresión lineal con sklearn.linear_model.LinearRegression donde una columna es el target y las demás las features).

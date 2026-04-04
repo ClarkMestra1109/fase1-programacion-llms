@@ -1,0 +1,15 @@
+Problema 2: Ingeniería de Variables de Tiempo (Cyclical Encoding)
+El Problema: Las variables temporales como "Hora del día" (0-23) tienen un problema: la hora 23 y la hora 0 están numéricamente lejos, pero temporalmente pegadas. Para que un modelo de ML entienda esto, se deben transformar en componentes seno y coseno.
+Tu Misión: Escribe una función que transforme una columna de horas en sus dos componentes cíclicas.
+
+Nombre de la función: codificar_ciclo_temporal
+
+Argumentos:
+
+df (pd.DataFrame): DataFrame original.
+
+col_hora (str): Nombre de la columna que contiene la hora (0 a 23).
+
+Tipo de objeto a devolver: pd.DataFrame (El DataFrame con dos nuevas columnas: hora_sin y hora_cos, eliminando la original).
+
+Requerimientos: Utiliza numpy.sin, numpy.cos y la constante np.pi para realizar la transformación matemática sobre los valores de la columna.

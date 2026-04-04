@@ -1,0 +1,17 @@
+Problema 1: Detección de Drift de Datos con el Test Kolmogorov-Smirnov
+El Problema: En producción, es vital saber si la distribución de los datos actuales ha cambiado respecto a los datos con los que se entrenó el modelo (Data Drift). Si las distribuciones son muy diferentes, el modelo dejará de ser confiable.
+Tu Misión: Escribe una función que compare dos DataFrames y determine para qué columnas se rechaza la hipótesis nula de que provienen de la misma distribución.
+
+Nombre de la función: verificar_drift_distribucion
+
+Argumentos:
+
+df_entrenamiento (pd.DataFrame): Datos históricos.
+
+df_actual (pd.DataFrame): Datos nuevos recibidos.
+
+alpha (float): Nivel de significancia (ej. 0.05).
+
+Tipo de objeto a devolver: list (Una lista con los nombres de las columnas donde se detectó drift).
+
+Requerimientos: Utiliza scipy.stats.ks_2samp para el test y pandas para iterar sobre columnas numéricas comunes.
