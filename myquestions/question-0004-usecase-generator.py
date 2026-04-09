@@ -3,7 +3,7 @@ import numpy as np
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.datasets import make_classification
 
-def generar_caso_de_uso_preparar_datos():
+def generar_caso_de_uso_mostrar_datos():
     """
     Genera un caso de uso aleatorio para la función seleccionar_features_por_peso.
     Retorna:
@@ -56,7 +56,7 @@ def generar_caso_de_uso_preparar_datos():
     return input_dict, output_esperado
 
 # --- Ejemplo de Inspección ---
-inp, out = generar_caso_de_uso_preparar_datos()
+inp, out = generar_caso_de_uso_mostrar_datos()
 
 print(f"--- PARÁMETROS ---")
 print(f"Porcentaje deseado: {inp['porcentaje_acumulado'] * 100}%")
