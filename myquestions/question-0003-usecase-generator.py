@@ -3,7 +3,7 @@ import numpy as np
 from statsmodels.stats.outliers_influence import variance_inflation_factor
 from statsmodels.tools.tools import add_constant
 
-def generar_caso_de_uso_preparar_datos():
+def generar_caso_de_uso_datos():
     """
     Genera un caso de uso aleatorio para la función identificar_variables_redundantes.
     Retorna:
@@ -54,7 +54,7 @@ def generar_caso_de_uso_preparar_datos():
     return input_dict, output_esperado
 
 # --- Ejemplo de visualización ---
-inp, out = generar_caso_de_uso_preparar_datos()
+inp, out = generar_caso_de_uso_datos()
 
 print(f"--- INPUT ---")
 
