@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-def generar_caso_de_uso_preparar_datos():
+def generar_caso_de_uso_crear_datos():
     """
     Genera un caso de uso aleatorio para la función codificar_ciclo_temporal.
     Retorna:
@@ -36,7 +36,7 @@ def generar_caso_de_uso_preparar_datos():
     return input_dict, df_output
 
 # --- Demostración del caso de uso ---
-inp, out = generar_caso_de_uso_preparar_datos()
+inp, out = generar_caso_de_uso_crear_datos()
 
 print("--- INPUT (DataFrame Original) ---")
 print(inp["df"])
