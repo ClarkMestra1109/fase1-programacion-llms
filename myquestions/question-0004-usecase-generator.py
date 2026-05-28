@@ -44,7 +44,7 @@ def generar_caso_de_uso_mostrar_datos():
     indice_corte = np.where(importancia_acumulada >= porcentaje_acumulado)[0][0]
 
     # Seleccionamos los nombres de las columnas hasta ese índice (inclusive)
-    output_esperado = importancias.index[:indice_corte + 1].values
+    output_esperado = list(importancias.index[:indice_corte + 1])
 
     # 3. Formatear el input
     input_dict = {
